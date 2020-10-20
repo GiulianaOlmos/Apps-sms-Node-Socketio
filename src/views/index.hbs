@@ -14,16 +14,17 @@
     </div>
     <div class="col-md-8">
         {{#if messages}}
-        <div class="card card-body">
+        <ul class="list-group"  style="height: 70vh; overflow-y:auto">
             {{#each messages}}
-                <div class="card card-body">
-                    <p>{{Body}}</p>
-                    <span>{{hideNumber To}}</span>
-                </div>
+            <div class="list-group-item list-group-item-info list-group-item-action">
+                <p>{{Body}}</p>
+                <span>{{hideNumber To}}</span>
+                <span>{{hideNumber From}}</span>
+            </div>
             {{/each}}
-        </div>
+        </ul>
         {{else}}
-            <p>Not messages yet</p>
+        <p>Not messages yet</p>
         {{/if}}
 
     </div>
